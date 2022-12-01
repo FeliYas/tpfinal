@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public class Equipo {
     private String nombre;
-    private ArrayList partidosJugados;
+    private int puntaje;
 
     public Equipo(String nombre) {
-        this.nombre = nombre;
+        setNombre(nombre);
+        setPuntaje(puntaje);
     }
 
     public String getNombre() {
@@ -18,11 +19,12 @@ public class Equipo {
         this.nombre = nombre;
     }
 
-    public ArrayList getPartidosJugados() {
-        return partidosJugados;
+
+    public int getPuntaje() {
+        return puntaje;
     }
 
-    public void setPartidosJugados(ArrayList partidosJugados) {
-        this.partidosJugados = partidosJugados;
+    public void setPuntaje(int puntaje) {
+        this.puntaje = puntaje;
     }
 }

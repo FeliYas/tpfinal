@@ -4,9 +4,15 @@ public class Resultado {
     private int golesLocal;
     private int golesVisitante;
 
-    public Resultado(int golesLocal, int golesVisitante) {
+    //GENERO SOBRE CARGA POR SI EMPATA NO HAY GOLES NO AGREGAR EL RESULTADO
+
+    public Resultado() {
         setGolesVisitante(0);
         setGolesLocal(0);
+    }
+    public Resultado(int golesLocal, int golesVisitante) {
+        setGolesVisitante(golesVisitante);
+        setGolesLocal(golesLocal);
     }
 
     public int getGolesLocal() {
@@ -28,7 +34,7 @@ public class Resultado {
     public boolean ganoLocal(){
         if (getGolesLocal()>getGolesVisitante());
         return true;
-    }
+        }
     public boolean empate(){
         if (getGolesLocal()==getGolesVisitante());
         return true;

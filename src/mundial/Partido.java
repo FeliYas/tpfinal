@@ -8,10 +8,18 @@ public class Partido {
     private Equipo visitante;
     private Resultado resultado;
 
-    Partido(Date fecha, Equipo local, Equipo visitante){
+    public Partido(Date fecha, Equipo local, Equipo visitante){
         setFecha(fecha);
         setLocal(local);
         setVisitante(visitante);
+        setResultado(new Resultado());
+    }
+
+    public Partido(Date fecha, Equipo local, Equipo visitante, Resultado resultado){
+        setFecha(fecha);
+        setLocal(local);
+        setVisitante(visitante);
+        setResultado(resultado);
     }
 
 

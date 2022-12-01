@@ -2,14 +2,15 @@ package mundial;
 
 import java.util.ArrayList;
 
-public class EtapaMundial {
+public abstract class EtapaMundial {
     private String descripccionEtapa;
-    private ArrayList partido;
+    private ArrayList<Partido> partido;
 
-    public EtapaMundial(String descripccionEtapa, ArrayList partido){
+    public EtapaMundial(String descripccionEtapa){
         setDescripccionEtapa(descripccionEtapa);
-        setPartido(partido);
     }
+
+    public abstract void addPartido(Partido partido);
 
     public String getDescripccionEtapa() {
         return descripccionEtapa;
